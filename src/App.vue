@@ -41,7 +41,7 @@
             Map
             #overlay.absolute
                 FeatureInfo
-    #bottom.bt.b--light-gray.flex-none.h2
+    //- #bottom.bt.b--light-gray.flex-none.h2
 </template>
 
 <script>

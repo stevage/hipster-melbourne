@@ -32,7 +32,8 @@ function toPoints(rows) {
 export default {
     async mounted() {
         // replace this Mapbox access token with your own
-        mapboxgl.accessToken = 'pk.eyJ1Ijoic3RldmFnZSIsImEiOiJjazNmNGV5enAwMTF1M2tuejhtc2twcXo5In0.mLPrYIYJ2FiFZ3KMqVIj6w';
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic3RldmFnZSIsImEiOiJjazNndHRpZWUwNTFpM2lxbGdkeWN1ZnNlIn0.Gz2dgs3kZUiDrYA4OItnJA';
+                                
         const map = new mapboxgl.Map({
             container: 'map',
             center: [144.96, -37.81],
