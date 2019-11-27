@@ -1,29 +1,42 @@
-# Community map template
+hipster-melbourne
+=================
 
-This is a simple template for a pin-based map that draws its content from a public Google Sheets worksheet.
+The Hipster Map of Melbourne created at www.meetup.com/Datahack-Melbourne/events/168328902/
+It's online at http://hipstermelbourne.org
 
-## Project setup
+### Media
 
-1. `yarn install`
-2. Change the project name in package.json
-3. Get an account on Mapbox, and replace the public token in Map.vue with your public token
+As seen in <a href="http://www.theage.com.au/victoria/mapping-the-hip-haunts-of-the-fashionably-uncool-20140406-366tz.html"><i>The Age</i> </a>and heard on <a href="http://www.abc.net.au/local/audio/2014/03/19/3962737.htm?site=melbourne">Aunty</a>.
 
-## Using a Google Sheet for data
+### Credits
 
-This project starts using data in https://docs.google.com/spreadsheets/d/1DFXQYOh2CRZbFtMAFNbVJwpWQxx_SUhPr56OYaDLWS0/edit?usp=sharing
+The Hipster Map of Melbourne is mostly the work of <a href="https://twitter.com/sauramaia">Maia Sauren</a> and <a href="https://twitter.com/stevage1">Steve Bennett</a> (implementation), with contributions from:
 
-1. Duplicate this Google Sheet and use it as a template. 
-2. Under File, "Publish to the web", as CSV.
-3. Put the CSV link in Map.vue.
+* <a href="https://twitter.com/mattcen">Matt Cengia</a>, 
+* <a href="https://twitter.com/bubbiting">Hamish</a>, 
+* <a href="https://twitter.com/mikeebinum">Mike Ebinum</a>, 
+* <a href="https://twitter.com/glentodd">Glenn Todd</a>, 
+* <a href="https://twitter.com/washingtonirving">Anthony Mockler</a>, 
+* <a href="https://twitter.com/nicsmythe">Nic Smythe</a>, 
+* Peter Dudley, <a href="https://twitter.com/fcteewdie">Fiona Tweedie</a>, 
+* AJ, <a href="https://twitter.com/mence/">Tim Hordern</a>. 
+ 
+(Have we missed anyone?)
+
+It was originally created at <a href="http://www.meetup.com/Datahack-Melbourne/events/168328902/">OKFN #datahack, in March 2014.
 
 
-### Running locally
-```
-npm run serve
-```
+Melbourne Ipsum text by <a href="http://www.melbourneipsum.com.au/">melbourneipsum.com.au</a>.
 
-## Publishing to Github
-1. Set up a Github repo (or fork the original source)
-2. Push an initial commit
-3. Run `yarn run deploy`
-4. Now configure Github Pages to use `docs` directory
+Map data: OpenStreetMap and Mapbox.
+
+Icons from the Noun Project:
+
+* Taco: Rihards Gromuls 842841
+* Coffee: Gregor Cresnar 836672
+* Glasses:659664 
+* Moustache: Jacqueline Fernandes 634518
+* Shoe: Emiliano Perez Alonzo 560147
+* Jar: MRFA 30644
+* Briefcase: Eugen Belyakoff 37427
+* 

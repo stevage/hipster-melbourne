@@ -8,7 +8,7 @@ import U from 'mapbox-gl-utils';
 const d3 = require('d3-fetch');
 
 // Replace this URL with your own Google Sheets link
-const csvSource = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR9qYMju-qqH_IL8e2ksN0wpVXfHBUEKF079WX1eSAgPFRG5z0RAmpjVwS8sVrZSC0fVrNpSMjaB5Cu/pub?gid=0&single=true&output=csv';
+const csvSource = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTotji1KdxoS6QjJdhlOs_s0kif_JIa6KEUX1qh_-qphRP1pr6s1hqqy_jOak861kEvTVLOm80Gknjg/pub?gid=0&single=true&output=csv&refresh=3';
 
 function toPoints(rows) {
     return {
@@ -21,7 +21,9 @@ function toPoints(rows) {
             },
             properties: {
                 id,
-                ...row
+                ...row,
+                name: row.Name || row.name,
+                category: row.Category || row.category
             }
         }))
     }
@@ -35,24 +37,27 @@ export default {
             container: 'map',
             center: [144.96, -37.81],
             zoom: 14,
-            style: 'mapbox://styles/mapbox/light-v9',
+            style: 'mapbox://styles/stevage/ciz68fsec00112rpal5hjru07?refresh=1',
         });
-        U.init(map);
+        U.init(map, mapboxgl);
         window.map = map;
         window.Map = this;
 
         const points = toPoints(await d3.csv(csvSource));
-        map.U.addGeoJSON('points', points);
-        map.U.addCircle('points-circles', 'points', {
-            circleColor: 'hsl(330,100%,40%)',
-            circleRadius: { stops: [[10,3], [12, 10]] }
-        });
-        map.U.hoverPointer('points-circles');
-        map.on('click', 'points-circles', e => {
-            console.log(e);
-            window.FeatureInfo.feature = e.features[0];
-        });
-        
+        map.U.addGeoJSON('places', points);
+        const hipsterLayers = map.getStyle().layers.map(l => l.id).filter(id => id.match(/hipster/))
+        map.U.setLayerSource(hipsterLayers, 'places',null);
+        // map.U.setData('hipster content', points);
+        map.U.hoverPointer(hipsterLayers);
+        map.U.clickPopup('hipster content', f => {
+            const url = f.properties.url ? `<p class='url'><a target="_blank" href="${f.properties.url}">Website</a></p>` : '';
+            return `
+            <div>
+                <h2>${f.properties.name}</h2>
+                <p>${f.properties.description}</p>
+                ${url}
+            </div>
+        `}, { maxWidth: 'none' });         
     }
 }
 import 'mapbox-gl/dist/mapbox-gl.css';
