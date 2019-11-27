@@ -1,7 +1,7 @@
 hipster-melbourne
 =================
 
-The Hipster Map of Melbourne created at www.meetup.com/Datahack-Melbourne/events/168328902/
+The Hipster Map of Melbourne created at [www.meetup.com/Datahack-Melbourne/events/168328902/](https://web.archive.org/web/20150225081514/http://www.meetup.com:80/Open-Knowledge-Melbourne/events/168328902/?action=detail&eventId=168328902)
 It's online at http://hipstermelbourne.org
 
 ### Media
@@ -23,7 +23,7 @@ The Hipster Map of Melbourne is mostly the work of <a href="https://twitter.com/
  
 (Have we missed anyone?)
 
-It was originally created at <a href="http://www.meetup.com/Datahack-Melbourne/events/168328902/">OKFN #datahack, in March 2014.
+It was originally created at <a href="https://web.archive.org/web/20150225081514/http://www.meetup.com:80/Open-Knowledge-Melbourne/events/168328902/?action=detail&eventId=168328902">OKFN #datahack, in March 2014.
 
 
 Melbourne Ipsum text by <a href="http://www.melbourneipsum.com.au/">melbourneipsum.com.au</a>.
